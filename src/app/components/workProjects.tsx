@@ -13,7 +13,7 @@ export default function WorkProjects() {
   const projects = [
     {
       name: "Kudata",
-      description: "platform designed to help students find respondents for their surveys. My role involves fixing bugs and improving existing features to enhance the website’s performance and user experience. This platform simplifies the process for students by connecting them with the right respondents, making data collection for their research projects more efficient and streamlined.",
+      description: "platform designed to help students find respondents for their surveys. My role involves fixing bugs and improving existing features to enhance the website&lsquo;s performance and user experience. This platform simplifies the process for students by connecting them with the right respondents, making data collection for their research projects more efficient and streamlined.",
       link: "/",
       source: "/",
       image: kudata,
@@ -22,7 +22,7 @@ export default function WorkProjects() {
     {
       name: "Simbatras",
       description:
-        "System information website using Laravel and ReactJS. This site helps manage data for a trash bank in Triaharjo village. It makes it easier to track and manage trash collection, recycling, and disposal. The goal is to improve the efficiency of the trash bank's operations and provide clear, accurate data to support the village's waste management efforts.",
+        "System information website using Laravel and ReactJS. This site helps manage data for a trash bank in Triaharjo village. It makes it easier to track and manage trash collection, recycling, and disposal. The goal is to improve the efficiency of the trash bank&lsquo;s operations and provide clear, accurate data to support the village&lsquo;s waste management efforts.",
       link: "/",
       source: "/",
       image: simbatras,
@@ -68,7 +68,7 @@ export default function WorkProjects() {
   return (
     <div className="mt-24 text-center">
       <Badge>Work Projects</Badge>
-      <h1 className="text-4xl font-bold mt-4 mb-2">Let's Get To Work 🚀</h1>
+      <h1 className="text-4xl font-bold mt-4 mb-2">Let&lsquo;s Get To Work 🚀</h1>
       <p>
         A showcase of my work—from quick fixes to full-fledged apps. Whether
         simple or complex, each project has its own story (and maybe a few late
@@ -87,7 +87,7 @@ export default function WorkProjects() {
               <p className="text-sm">{project.description}</p>
               <div className="flex flex-wrap gap-1 mt-2">
                 {project.tech.map((item) => (
-                  <Badge className="bg-[#272727] text-white rounded-md">
+                  <Badge key={item} className="bg-[#272727] text-white rounded-md">
                     {item}
                   </Badge>
                 ))}

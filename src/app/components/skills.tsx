@@ -1,8 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
-type Props = {};
-
-export default function Skills({}: Props) {
+export default function Skills() {
   const technicalSkills = [
     "React",
     "Redux",
@@ -31,7 +29,7 @@ export default function Skills({}: Props) {
         <h4 className="font-bold text-xl mb-2">Technical Skills</h4>
         <div className="flex flex-wrap items-center gap-1 ">
           {technicalSkills.map((item) => (
-            <Badge className="rounded-sm px-3 ">{item}</Badge>
+            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
           ))}
         </div>
       </div>
@@ -39,7 +37,7 @@ export default function Skills({}: Props) {
         <h4 className="font-bold text-xl mb-2">Soft Skills</h4>
         <div className="flex flex-wrap items-center gap-1 ">
           {softSkills.map((item) => (
-            <Badge className="rounded-sm px-3 ">{item}</Badge>
+            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
           ))}
         </div>
       </div>
@@ -47,7 +45,7 @@ export default function Skills({}: Props) {
         <h4 className="font-bold text-xl mb-2">Tools</h4>
         <div className="flex flex-wrap items-center gap-1 ">
           {tools.map((item) => (
-            <Badge className="rounded-sm px-3 ">{item}</Badge>
+            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
           ))}
         </div>
       </div>

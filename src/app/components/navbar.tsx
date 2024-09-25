@@ -5,7 +5,6 @@ import {
   HomeIcon,
   LinkedInLogoIcon,
   GitHubLogoIcon,
-  ReaderIcon,
 } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
@@ -44,7 +43,7 @@ export default function Navbar() {
           <TooltipProvider key={index}>
             <Tooltip>
               <TooltipTrigger className="hover:px-2 transition-all ease-in-out duration-200">
-                {cloneElement(item.icon, { width: 24, height: 24 })}
+                <a href={item.path}>{cloneElement(item.icon, { width: 24, height: 24 })}</a>
               </TooltipTrigger>
               <TooltipContent>
                 <p>{item.label}</p>

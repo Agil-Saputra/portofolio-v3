@@ -5,7 +5,6 @@ import Education from "./components/education";
 import Skills from "./components/skills";
 import WorkProjects from "./components/workProjects";
 import Contact from "./components/contact";
-import Certification from "./components/certification";
 import MyProfilePhoto from "@/assets/my-profile-photo.png"
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
     <main className="container pb-32">
 		<div className="flex justify-between mt-16 gap-4">
 		<div>
-			<h1 className="md:text-6xl text-4xl  font-bold">Hi, I'm Agil Saputra👋</h1>
+			<h1 className="md:text-6xl text-4xl  font-bold">Hi, I&lsquo;m Agil Saputra👋</h1>
 			<h3 className="md:text-3xl text-xl font-semibold mt-2">Frontend Developer✨</h3>
 		</div>
 		<Image

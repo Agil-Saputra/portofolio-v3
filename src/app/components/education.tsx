@@ -18,7 +18,7 @@ export default function Education() {
                 Universitas Amikom Yogyakarta
               </h3>
               <p className="text-md capitalize">
-                Undergraduate Bachelor's Degree of Informatics
+                Undergraduate Bachelor&lsquo;s Degree of Informatics
               </p>
             </div>
           </div>
