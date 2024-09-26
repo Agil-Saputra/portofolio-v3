@@ -14,8 +14,8 @@ export default function WorkProjects() {
     {
       name: "Kudata",
       description: "platform designed to help students find respondents for their surveys. My role involves fixing bugs and improving existing features to enhance the website&lsquo;s performance and user experience. This platform simplifies the process for students by connecting them with the right respondents, making data collection for their research projects more efficient and streamlined.",
-      link: "/",
-      source: "/",
+      link: "https://kudata.id",
+      source: "",
       image: kudata,
       tech: ["Vue.js", "Vuex", "Sass", "Tailwind CSS", "Shadcn"],
     },
@@ -23,8 +23,8 @@ export default function WorkProjects() {
       name: "Simbatras",
       description:
         "System information website using Laravel and ReactJS. This site helps manage data for a trash bank in Triaharjo village. It makes it easier to track and manage trash collection, recycling, and disposal. The goal is to improve the efficiency of the trash bank&lsquo;s operations and provide clear, accurate data to support the village&lsquo;s waste management efforts.",
-      link: "/",
-      source: "/",
+      link: "https://simbatras.com",
+      source: "",
       image: simbatras,
       tech: ["React.js", "Laravel", "Material UI", "Tailwind CSS"],
     },
@@ -32,8 +32,8 @@ export default function WorkProjects() {
       name: "Elmart",
       description:
         "An E-commerce app using Next.js with full functionality, including a cart feature using React Context API and Local Storage for cart data. I integrated Contentful CMS for easy product management, used Tailwind CSS and Material UI for an intuitive UI, and implemented Stripe for secure payments.",
-      link: "/",
-      source: "/",
+      link: "https://elemart-ecommerce-app.vercel.app/",
+      source: "https://github.com/Agil-Saputra/Elmart-Ecommerce-App",
       image: elmart,
       tech: ["Next.js", "Contentful", "Material UI", "Tailwind CSS"],
     },
@@ -74,7 +74,7 @@ export default function WorkProjects() {
         simple or complex, each project has its own story (and maybe a few late
         nights).
       </p>
-      <div className="mt-12 grid grid-cols-2 gap-6">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <div className="border rounded-md text-left" key={project.name}>
             <Image
