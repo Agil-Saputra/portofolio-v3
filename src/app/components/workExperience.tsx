@@ -11,7 +11,7 @@ export default function workExperience() {
       position: "Front End Engineer",
       period: "June 2024 - Present",
       description:
-        'I integrated Google Single Sign-On (SSO) for user login and registration, developed a detailed header for survey previews, and implemented a "Forgot Password" feature to enhance user experience. Additionally, I built a user email verification system and implemented identity verification with KTP, both integrated with the backend API.',
+        'I integrated Google Single Sign-On (SSO) for user login and registration, developed a detailed header for survey previews, and implemented a Forgot Password feature to enhance user experience. Additionally, I built a user email verification system and implemented identity verification with KTP, both integrated with the backend API.',
       type: "Part Time",
       logo: kudataLogo,
     },
