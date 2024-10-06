@@ -1,5 +1,4 @@
 "use client";
-
 import React, { cloneElement } from "react";
 import {
   HomeIcon,
@@ -36,7 +35,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="w-full grid place-items-center relative">
+    <div className="w-full grid place-items-center relative z-[999999]">
       <div className="fixed bottom-0 inset-x-0 h-24 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
       <nav className="fixed bottom-6 flex gap-3 px-6 py-4 rounded-full border dark:bg-black bg-white ">
         {navItems.map((item, index) => (

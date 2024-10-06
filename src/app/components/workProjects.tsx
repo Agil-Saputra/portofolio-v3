@@ -8,6 +8,7 @@ import kudata from "@/assets/kudata.png";
 import bookmark from "@/assets/bookmark-landing-page.png";
 import rentalmobiligra from "@/assets/rental-iqra.png";
 import { GlobeIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import * as motion from "framer-motion/client";
 
 export default function WorkProjects() {
   const projects = [
@@ -22,7 +23,7 @@ export default function WorkProjects() {
     {
       name: "Simbatras",
       description:
-        "System information website using Laravel and ReactJS. This site helps manage data for a trash bank in Triaharjo village. It makes it easier to track and manage trash collection, recycling, and disposal. The goal is to improve the efficiency of the trash bank operations and provide clear, accurate data to support the village&lsquo;s waste management efforts.",
+        "System information website using Laravel and ReactJS. This site helps manage data for a trash bank in Triaharjo village. It makes it easier to track and manage trash collection, recycling, and disposal. The goal is to improve the efficiency of the trash bank operations and provide clear, accurate data to support the village waste management efforts.",
       link: "https://simbatras.com",
       source: "",
       image: simbatras,
@@ -38,7 +39,7 @@ export default function WorkProjects() {
       tech: ["Next.js", "Contentful", "Material UI", "Tailwind CSS"],
     },
     {
-      name: "CODE 2023 Landing Page",
+      name: "CODE 2024 Landing Page",
       description:
         "Fully responsive landing page for the CODE 2024 event held by AMCC, CODE is an annual competition event with the software development and competitive programming categories. ",
       link: "https://code.amcc.or.id/",
@@ -68,18 +69,19 @@ export default function WorkProjects() {
   return (
     <div className="mt-24 text-center">
       <Badge>Work Projects</Badge>
-      <h1 className="text-4xl font-bold mt-4 mb-2">Let&lsquo;s Get To Work 🚀</h1>
-      <p>
+
+      <motion.h1 initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} transition={{delay: 0.1}} viewport={{once : true}}  className="text-4xl font-bold mt-4 mb-2">Let&lsquo;s Get To Work 🚀</motion.h1>
+      <motion.p initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} transition={{delay: 0.1}} viewport={{once : true}} >
         A showcase of my work—from quick fixes to full-fledged apps. Whether
         simple or complex, each project has its own story (and maybe a few late
         nights).
-      </p>
+      </motion.p>
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <div className="border rounded-md text-left" key={project.name}>
-            <Image
+          <motion.div initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} viewport={{once : true}} className="border rounded-md text-left" key={project.name}>
+			<Image
               src={project.image}
-              alt="simbatras.com"
+              alt={project.name}
               className="rounded-t-md"
             />
             <div className="px-4">
@@ -109,7 +111,7 @@ export default function WorkProjects() {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

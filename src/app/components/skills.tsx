@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import * as motion from "framer-motion/client";
 
 export default function Skills() {
   const technicalSkills = [
@@ -28,24 +29,30 @@ export default function Skills() {
       <div className="mt-4">
         <h4 className="font-bold text-xl mb-2">Technical Skills</h4>
         <div className="flex flex-wrap items-center gap-1 ">
-          {technicalSkills.map((item) => (
-            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
+          {technicalSkills.map((item, index) => (
+            <motion.div key={item} initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} transition={{delay: Number(index > 10 ? (index / 10).toFixed(1) : `0.${index}`)}} viewport={{once : true}} >
+				<Badge className="rounded-sm px-3 " >{item}</Badge>
+			</motion.div>
           ))}
         </div>
       </div>
       <div className="mt-4">
         <h4 className="font-bold text-xl mb-2">Soft Skills</h4>
         <div className="flex flex-wrap items-center gap-1 ">
-          {softSkills.map((item) => (
-            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
+          {softSkills.map((item, index) => (
+			<motion.div key={item} initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} transition={{delay: Number(`0.${index}`)}} viewport={{once : true}} >
+				<Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
+			</motion.div>
           ))}
         </div>
       </div>
       <div className="mt-4">
         <h4 className="font-bold text-xl mb-2">Tools</h4>
         <div className="flex flex-wrap items-center gap-1 ">
-          {tools.map((item) => (
-            <Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
+          {tools.map((item, index) => (
+						<motion.div key={item} initial={{opacity : 0, y : 100}} whileInView={{opacity : 1, y: 0}} transition={{delay: Number(`0.${index}`)}} viewport={{once : true}} >
+							<Badge className="rounded-sm px-3 " key={item}>{item}</Badge>
+			</motion.div>
           ))}
         </div>
       </div>
