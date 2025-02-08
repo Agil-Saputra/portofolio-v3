@@ -227,7 +227,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 target="_blank"
                 href=""
-                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 active:translate-y-0  transition-colors"
               >
                 <WorkCard
                   company={item.company}
@@ -281,7 +281,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 target="_blank"
                 href={certificate.href}
-                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70  transition-colors"
               >
                 <LicenseCard
                   title={certificate.title}
@@ -384,7 +384,7 @@ export default function Home() {
               viewport={{ once: true }}
               target="_blank"
               href=""
-              className="col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+              className="col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70  transition-colors"
             >
               <EducationCard
                 major="Undergraduate Bachelor‘s Degree of Informatics"
