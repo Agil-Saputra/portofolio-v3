@@ -25,7 +25,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         loading="lazy"
         decoding="async"
         data-nimg="1"
-        className="rounded-lg object-cover object-top w-full h-[350px]"
+        className="rounded-lg object-contain object-top w-full xl:object-cover xl:h-[350px]"
         src={image}
       />
       <div className="flex w-full mt-4">

@@ -13,9 +13,9 @@ export default function Home() {
   const date = new Date();
 
   function greetings(hours: number) {
-    if (hours < 12 && hours > 1) {
+    if (hours < 12 && hours >= 1) {
       return "Good Morning";
-    } else if (hours > 12 && hours < 18) {
+    } else if (hours >= 12 && hours <= 18) {
       return "Good Afternoon";
     } else if (hours > 18) {
       return "Good Evening";
@@ -50,7 +50,7 @@ export default function Home() {
                 <h3 className="md:text-3xl font-semibold mt-2 text-center md:text-left">
                   Frontend Developer✨
                 </h3>
-                <div className="absolute w-[12rem] text-center grid place-items-center p-4 bg-green-500 rounded-full md:-right-28 -top-14 font-bold text-xl -right-[125px] md:scale-100 scale-75">
+                <div className="absolute w-[14rem] text-center grid place-items-center p-4 bg-green-500 rounded-full md:-right-28 -top-14 font-bold text-xl -right-[125px] md:scale-100 scale-75">
                   {greetings(date.getHours())}👋
                   <svg
                     viewBox="0 0 22 18"
@@ -448,7 +448,7 @@ export default function Home() {
 
 	  <footer className="text-center py-12">
 		<p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
-		<a href="mailto:ragelyusuf752@gmail.com" className="mt-1 text-2xl text-gray-400 text-md underline">ragelyusuf752@gmail.com</a>
+		<a href="mailto:ragelyusuf752@gmail.com" className="mt-1 md:text-2xl text-xl text-gray-400 text-md underline">ragelyusuf752@gmail.com</a>
 	  </footer>
     </>
   );
