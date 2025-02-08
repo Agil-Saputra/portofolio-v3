@@ -7,9 +7,8 @@ import LicenseCard from "./components/cards/licenseCard";
 import EducationCard from "./components/cards/educationCard";
 import ProjectCard from "./components/cards/projectCard";
 
-import { skills as SkillsData, frontEndSkills } from "./db/skills";
-import { appProjects, designProjects } from "./db/projects";
-import { title } from "process";
+import { skills as SkillsData } from "./db/skills";
+import { appProjects } from "./db/projects";
 export default function Home() {
   const date = new Date();
 
@@ -40,7 +39,7 @@ export default function Home() {
               {/* Profile Photo */}
               <Image
                 src={MyProfilePhoto}
-                alt="Agil's Profile Photo"
+                alt="Agil Profile Photo"
                 className="md:w-32 md:h-32 w-16 h-16 bg-slate-200 object-cover rounded-lg"
               />
               {/* Name & title */}
@@ -448,7 +447,7 @@ export default function Home() {
       </div> */}
 
 	  <footer className="text-center py-12">
-		<p className="text-xl text-gray-500 ">Get in touch! Let's talk</p>
+		<p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
 		<a href="mailto:ragelyusuf752@gmail.com" className="mt-1 text-2xl text-gray-400 text-md underline">ragelyusuf752@gmail.com</a>
 	  </footer>
     </>

@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 type ProjectCardProps = {
   title: string;
   description: string;
   skills: string[] | undefined;
   href: string | undefined;
-  image: any;
+  image: StaticImageData;
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({
