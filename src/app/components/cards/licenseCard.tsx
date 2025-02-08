@@ -1,7 +1,5 @@
 import { FC } from "react";
-import { motion } from "framer-motion";
 type LicenseCardProps = {
-  href: string;
   title: string;
   source: string;
   startMonth: string;
@@ -11,7 +9,6 @@ type LicenseCardProps = {
 
 const LicenseCard: FC<LicenseCardProps> = ({
   title,
-  href,
   source,
   startMonth,
   startYear,

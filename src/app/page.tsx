@@ -7,13 +7,12 @@ import WorkCard from "./components/cards/workCard";
 import LicenseCard from "./components/cards/licenseCard";
 import EducationCard from "./components/cards/educationCard";
 import ProjectCard from "./components/cards/projectCard";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { skills as SkillsData } from "./db/skills";
 import { appProjects } from "./db/projects";
 import { workExperiences } from "./db/experiences";
 import { certifications } from "./db/certifications";
-import { div } from "framer-motion/client";
 export default function Home() {
   const date = new Date();
 
@@ -281,16 +280,15 @@ export default function Home() {
                 }}
                 viewport={{ once: true }}
                 target="_blank"
-                href=""
+                href={certificate.href}
                 className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
               >
                 <LicenseCard
                   title={certificate.title}
                   source={certificate.source}
-                  href={certificate.href}
-                  startMonth={certificate.startMonth}
                   startYear={certificate.startYear}
                   certificateID={certificate.certificateID}
+                  startMonth={certificate.startMonth}
                 />
               </motion.a>
             ))}

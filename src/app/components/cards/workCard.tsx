@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { motion } from "framer-motion";
 
 type WorkCardProps = {
   role: string;
