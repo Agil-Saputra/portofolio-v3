@@ -50,7 +50,7 @@ export default function Home() {
                 <h3 className="md:text-3xl font-semibold mt-2 text-center md:text-left">
                   Frontend Developer✨
                 </h3>
-                <div className="absolute w-[14rem] text-center grid place-items-center p-4 bg-green-500 rounded-full md:-right-28 -top-14 font-bold text-xl -right-[125px] md:scale-100 scale-75">
+                <div className="absolute w-[14rem] text-center grid place-items-center px-4 py-3 bg-green-500 rounded-full md:-right-28 -top-14 font-bold text-xl -right-[125px] md:scale-100 scale-75">
                   {greetings(date.getHours())}👋
                   <svg
                     viewBox="0 0 22 18"

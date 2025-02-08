@@ -17,7 +17,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
   image,
 }) => {
 	
-
   return (
     <div className="relative flex h-full flex-col items-start bg-white/50 p-4 md:p-6 transition-colors group dark:bg-gray-950/50 border overflow-hidden rounded-lg hover:dark:border-gray-500 trnasition-all">
       <Image
@@ -25,7 +24,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         loading="lazy"
         decoding="async"
         data-nimg="1"
-        className="rounded-lg object-contain object-top w-full xl:object-cover xl:h-[350px]"
+        className="rounded-lg object-contain object-top w-full "
         src={image}
       />
       <div className="flex w-full mt-4">
