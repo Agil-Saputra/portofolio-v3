@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import MyProfilePhoto from "@/assets/my-profile-photo.png";
 import ContactIconButton from "./components/ui/contactIconButton";
@@ -6,9 +7,13 @@ import WorkCard from "./components/cards/workCard";
 import LicenseCard from "./components/cards/licenseCard";
 import EducationCard from "./components/cards/educationCard";
 import ProjectCard from "./components/cards/projectCard";
+import { delay, motion } from "framer-motion";
 
 import { skills as SkillsData } from "./db/skills";
 import { appProjects } from "./db/projects";
+import { workExperiences } from "./db/experiences";
+import { certifications } from "./db/certifications";
+import { div } from "framer-motion/client";
 export default function Home() {
   const date = new Date();
 
@@ -35,7 +40,13 @@ export default function Home() {
       <div className="border-b border-gray-30 dark:border-gray-500">
         <div className="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10 xl:px-10">
           <div className="col-span-10 border-x border-gray-30 dark:border-gray-500 min-[896px]:col-span-6">
-            <div className="flex flex-col md:flex-row gap-4 py-4 px-8 items-center">
+            <motion.div
+              initial={{  opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row gap-4 py-4 px-8 items-center"
+            >
               {/* Profile Photo */}
               <Image
                 src={MyProfilePhoto}
@@ -64,13 +75,19 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="col-span-2 border-r border-gray-30 dark:border-gray-500 min-[896px]:col-span-2"></div>
           {/* Contact Buttons */}
           <div className="col-span-12 flex-col items-end justify-end border-x border-t border-gray-30 bg-gradient-to-br from-gray-30/30 via-white to-white p-4 md:p-8 text-right dark:border-gray-500 dark:from-gray-700 dark:via-gray-1000 dark:to-gray-1000  md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-4">
             <div className="flex justify-between md:justify-end md:text-right">
-              <div className="flex items-center justify-end space-x-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                className="flex items-center justify-end space-x-2"
+              >
                 <ContactIconButton
                   title="LinkedIn"
                   href="https://linkedin.com/in/agilsaputra07"
@@ -78,7 +95,7 @@ export default function Home() {
                   <svg
                     viewBox="0 0 425 512"
                     fill="none"
-                    className="w-4 md:w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray-800 dark:text-gray-50 dark:group-hover:text-green-400"
+                    className="w-4 md:w-5 flex-shrink-0 text-gray-40 transition-all group-hover:text-gray--800 dark:text-gray-50 dark:group-hover:text-green-400"
                   >
                     <path
                       d="M317 51q21.5 0 40.5 8.25t33.25 22.5 22.5 33.25 8.25 40.5v209q0 21.5-8.25 40.75t-22.5 33.5-33.25 22.5-40.5 8.25H107.5q-21.5 0-40.5-8.25t-33.25-22.5-22.5-33.5T3 364.5v-209Q3 134 11.25 115t22.5-33.25T67 59.25 107.5 51H317zM147 208H94.5v170H147V208zm-26-13.5q10.5 0 18.25-7.5t7.75-18.5-7.75-18.5-18.25-7.5q-11 0-18.75 7.5t-7.75 18.5 7.75 18.5 18.75 7.5zm209 85q0-18-10-35.25T294 218q-14.5-8-33.75-8.5T225.5 216v-8H173v170h52.5V274l21.5-10.5q4-2 11-2t10.5 2.5q3 1.5 6 6.5t3 9V378H330v-98.5z"
@@ -101,15 +118,21 @@ export default function Home() {
                     ></path>
                   </svg>
                 </ContactIconButton>
-              </div>
-              <div className="flex text-xs md:text-sm flex-col md:ml-6">
+              </motion.div>
+              <motion.div
+                initial={{  opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                className="flex text-xs md:text-sm flex-col md:ml-6"
+              >
                 <div className="mb-1 md:mb-2 font-bold uppercase">
                   Let`s Connect!
                 </div>
                 <div className="font-medium text-gray-50">
                   ragelyusuf752@gmail.com
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -118,10 +141,22 @@ export default function Home() {
       {/* About Me */}
       <div className="mx-auto grid max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10">
         <div className="px-6 pt-6 md:pt-8 md:px-8 border-r border-l border-b border-gray-500">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-snug">
+          <motion.h2
+            initial={{  opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="text-xl md:text-2xl lg:text-3xl font-bold tracking-snug"
+          >
             About me
-          </h2>
-          <div className="mt-4 mb-6 space-y-6 text-md md:text-md leading-normal text-gray-50">
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="mt-4 mb-6 space-y-6 text-md md:text-md leading-normal text-gray-50"
+          >
             <div className="flex flex-col">
               <p className="max-md:text-sm">
                 Hi, I’m{" "}
@@ -149,14 +184,20 @@ export default function Home() {
                 to a dynamic team.
               </span> */}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="mx-auto grid md:grid-cols-2 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b">
         {/* Work Experience */}
         <div className="w-full col-span-1 border-x bg-gray-5/20 bg-center bg-dotted-light p-4 dark:border-gray-500 dark:bg-transparent md:p-8">
-          <div className="flex items-center space-x-3">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="flex items-center space-x-3"
+          >
             <svg
               viewBox="0 0 15 17"
               fill="none"
@@ -172,41 +213,45 @@ export default function Home() {
             <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
               Work Experience
             </div>
-          </div>
+          </motion.div>
           <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
-            <WorkCard
-              company="Kudata"
-              role="Front End Engineer"
-              endMonth="January"
-              endYear="2025"
-              startMonth="June"
-              startYear="2024"
-              href=""
-            />
-            <WorkCard
-              company="Jasa Inti Solusi Sukses"
-              role="Web Developer"
-              endMonth="July"
-              endYear="2023"
-              startMonth="August"
-              startYear="2023"
-              href=""
-            />
-            <WorkCard
-              company="RI Software"
-              role="Front End Developer"
-              endMonth="June"
-              endYear="2023"
-              startMonth="July"
-              startYear="2023"
-              href=""
-            />
+            {workExperiences.map((item, index) => (
+              <motion.a
+                key={item.description}
+                initial={{ opacity: 0 }}
+                whileInView={{  opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                target="_blank"
+                href=""
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+              >
+                <WorkCard
+                  company={item.company}
+                  role={item.position}
+                  endMonth={item.endMonth}
+                  endYear={item.endYear}
+                  startMonth={item.startMonth}
+                  startYear={item.startYear}
+                />
+              </motion.a>
+            ))}
           </div>
         </div>
 
         {/* License & Certification */}
         <div className="w-full col-span-1 border-r border-l md:border-l-0 border-t md:border-t-0 bg-gray-5/20 bg-center p-4 dark:border-gray-500 dark:bg-transparent md:p-8">
-          <div className="flex items-center space-x-3">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="flex items-center space-x-3"
+          >
             <svg
               viewBox="0 0 15 17"
               fill="none"
@@ -222,32 +267,33 @@ export default function Home() {
             <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
               Certificates
             </div>
-          </div>
+          </motion.div>
           <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
-            <LicenseCard
-              title="Basic Web Programming"
-              source="Dicoding"
-              href="https://drive.google.com/file/d/1mlixt6FXCC7PFlEVdyra05rjFxJ-Gc8N/view?usp=sharing"
-              startMonth="November"
-              startYear="2023"
-              certificateID="53XE42E9VZRN"
-            />
-            <LicenseCard
-              title="Basic Front End Web Development"
-              source="Dicoding"
-              href="https://drive.google.com/file/d/1ZkMnODkWOzpXX6T_ik3SW_iALYTtxqMr/view?usp=sharing"
-              startMonth="November"
-              startYear="2023"
-              certificateID="JLX1W8M9JP72"
-            />
-            <LicenseCard
-              title="Javasript Intermediate"
-              source="Sololearn"
-              href="https://www.sololearn.com/certificates/CC-ZN8ET1H1"
-              startMonth="June"
-              startYear="2023"
-              certificateID="CC-ZN8ET1H1"
-            />
+            {certifications.map((certificate, index) => (
+              <motion.a
+                key={certificate.href}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                target="_blank"
+                href=""
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+              >
+                <LicenseCard
+                  title={certificate.title}
+                  source={certificate.source}
+                  href={certificate.href}
+                  startMonth={certificate.startMonth}
+                  startYear={certificate.startYear}
+                  certificateID={certificate.certificateID}
+                />
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>
@@ -256,7 +302,13 @@ export default function Home() {
         {/* Skills */}
         <div className="border-l border-r md:border-r-0 border-b md:border-b-0 border-gray-500 bg-gray-1000/20 p-6 md:p-8 transition-colors hover:bg-transparent ">
           <div className="flex w-full flex-col items-start pr-6 xs:pr-8 sm:pr-0 mb-6">
-            <div className="flex items-center space-x-3">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-3"
+            >
               <svg
                 viewBox="0 0 17 16"
                 fill="none"
@@ -272,26 +324,40 @@ export default function Home() {
               <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
                 Skills
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="grid md:grid-cols-2 md:mt-0 border-gray-500 border-t ">
-            {SkillsData.map((skill) => (
-              <div
+            {SkillsData.map((skill, index) => (
+              <motion.div
                 key={skill}
                 className="py-1 md:py-2 group border-b border-gray-500"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
               >
                 <a className="inline-block active:translate-y-[1px]">
                   <span className="text-sm md:text-md text-white transition-colors group-hover:text-green-500">
                     - {skill}
                   </span>
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
         {/* Education */}
         <div className="w-full border-x col-span-1 border-r bg-gray-5/20 bg-center p-4 dark:border-gray-500 dark:bg-transparent md:p-8">
-          <div className="flex items-center space-x-3">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="flex items-center space-x-3"
+          >
             <svg
               viewBox="0 0 16 18"
               fill="none"
@@ -311,28 +377,49 @@ export default function Home() {
             <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
               Education
             </div>
-          </div>
+          </motion.div>
           <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
-            <EducationCard
-              major="Undergraduate Bachelor‘s Degree of Informatics"
-              institution="Amikom Yogyakarta University"
-              startMonth="August"
-              startYear="2023"
-              endMonth=""
-              endYear=""
-              isCurrent={true}
-              relatedCourse="Object Oriented Programming, Data Stuructures & Algorithm, Human Computer Interaction."
-            />
-            <EducationCard
-              major="Mathematic & Science"
-              institution="SMA Xaverius 01 Belitang"
-              startMonth="August"
-              startYear="2023"
-              endMonth=""
-              endYear=""
-              isCurrent={true}
-              relatedCourse=""
-            />
+            <motion.a
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              target="_blank"
+              href=""
+              className="col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+            >
+              <EducationCard
+                major="Undergraduate Bachelor‘s Degree of Informatics"
+                institution="Amikom Yogyakarta University"
+                startMonth="August"
+                startYear="2023"
+                endMonth=""
+                endYear=""
+                isCurrent={true}
+                relatedCourse="Object Oriented Programming, Data Stuructures & Algorithm, Human Computer Interaction."
+              />
+            </motion.a>
+
+            <motion.a
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              target="_blank"
+              href=""
+              className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+            >
+              <EducationCard
+                major="Mathematic & Science"
+                institution="SMA Xaverius 01 Belitang"
+                startMonth="August"
+                startYear="2023"
+                endMonth=""
+                endYear=""
+                isCurrent={true}
+                relatedCourse=""
+              />
+            </motion.a>
           </div>
         </div>
       </div>
@@ -360,15 +447,26 @@ export default function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {appProjects.map((project) => (
-              <ProjectCard
+            {appProjects.map((project, index) => (
+              <motion.div
                 key={project.description}
-                title={project.name}
-                description={project.description}
-                href={project.link}
-                skills={project.tech}
-                image={project.image}
-              />
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+              >
+                <ProjectCard
+                  title={project.name}
+                  description={project.description}
+                  href={project.link}
+                  skills={project.tech}
+                  image={project.image}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
@@ -446,10 +544,15 @@ export default function Home() {
         </div>
       </div> */}
 
-	  <footer className="text-center py-12">
-		<p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
-		<a href="mailto:ragelyusuf752@gmail.com" className="mt-1 md:text-2xl text-xl text-gray-400 text-md underline">ragelyusuf752@gmail.com</a>
-	  </footer>
+      <footer className="text-center py-12">
+        <p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
+        <a
+          href="mailto:ragelyusuf752@gmail.com"
+          className="mt-1 md:text-2xl text-xl text-gray-400 text-md underline"
+        >
+          ragelyusuf752@gmail.com
+        </a>
+      </footer>
     </>
   );
 }
