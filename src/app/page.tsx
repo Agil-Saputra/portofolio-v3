@@ -502,7 +502,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="mx-auto grid grid-cols-12 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b ">
+      {/* <div className="mx-auto grid grid-cols-12 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b ">
         <div className="col-span-12 border-x border-gray-500 bg-gray-1000/20 p-6 md:p-8 transition-colors hover:bg-transparent bg-dotted-light">
           <div className="flex w-full flex-col items-start pr-6 xs:pr-8 sm:pr-0">
             <div className="flex items-center space-x-3">
@@ -540,7 +540,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <footer className="text-center py-12">
         <p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
