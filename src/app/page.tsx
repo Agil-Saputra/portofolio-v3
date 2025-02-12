@@ -9,7 +9,7 @@ import EducationCard from "./components/cards/educationCard";
 import ProjectCard from "./components/cards/projectCard";
 import { motion } from "framer-motion";
 
-import { skills as SkillsData, frontEndSkills } from "./db/skills";
+import { skills as SkillsData} from "./db/skills";
 import { appProjects } from "./db/projects";
 import { workExperiences } from "./db/experiences";
 import { certifications } from "./db/certifications";
