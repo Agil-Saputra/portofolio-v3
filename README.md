@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agil Saputra - Frontend Developer Portfolio
 
-## Getting Started
+Welcome to my portfolio! This project showcases my skills and experience as a Frontend Developer, built using **Next.js**, **Tailwind CSS**, and **Framer Motion**. The portfolio is designed to be responsive, interactive, and visually appealing, reflecting my passion for creating engaging digital experiences.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js**: A React framework for server-rendered applications, providing optimized performance and SEO benefits.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Framer Motion**: A production-ready motion library for React, used to create smooth animations and transitions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Responsive Design**: The portfolio is fully responsive, ensuring a seamless experience across all devices.
+- **Interactive Animations**: Utilizes Framer Motion for engaging animations that enhance user interaction.
+- **SEO Optimization**: Built with Next.js for improved search engine visibility.
+  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+2. **Navigate to the project directory**:
+   ```bash
+   cd your-repo-name
+3. **Install dependencies**:
+   ```bash
+   npm install
+4. **Run the development server:**:
+   ```bash
+   npm run dev
+Open your browser and visit http://localhost:3000 to view the portfolio.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+Feel free to explore the portfolio to learn more about my work and experience. You can navigate through different sections using the menu, and interact with various elements to see the animations in action.
+   
