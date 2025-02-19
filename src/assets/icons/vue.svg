@@ -1,1 +1,13 @@
-<svg viewBox="0 0 260 260" fill="none" class="h-20 md:h-24 w-auto"><g filter="url(#filter0_d_301_8887)"><rect x="40.0001" y="36" width="180" height="180" rx="32" fill="#1D1F23"></rect><rect x="40.5001" y="36.5" width="179" height="179" rx="31.5" stroke="black"></rect></g><path d="M159.933 82.4692H179.933L129.933 168.719L79.9329 82.4692H118.183L129.933 102.469L141.433 82.4692H159.933Z" fill="#41B883"></path><path d="M79.9329 82.4692L129.933 168.719L179.933 82.4692H159.933L129.933 134.219L99.6829 82.4692H79.9329Z" fill="#41B883"></path><path d="M99.6829 82.4692L129.933 134.469L159.933 82.4692H141.433L129.933 102.469L118.183 82.4692H99.6829Z" fill="#35495E"></path><defs><filter id="filter0_d_301_8887" x="0.0001297" y="0" width="260" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="4"></feOffset><feGaussianBlur stdDeviation="20"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0.0367917 0 0 0 0 0.0348958 0 0 0 0 0.0484375 0 0 0 0.1 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_301_8887"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_301_8887" result="shape"></feBlend></filter></defs></svg>
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1387_571)">
+<path d="M11.4844 0H3.51562C1.574 0 0 1.574 0 3.51562V11.4844C0 13.426 1.574 15 3.51562 15H11.4844C13.426 15 15 13.426 15 11.4844V3.51562C15 1.574 13.426 0 11.4844 0Z" fill="#F4F2EE"/>
+<path d="M10.6641 2.92969H12.7734L7.5 12.0264L2.22656 2.92969H6.26074L7.5 5.03906L8.71289 2.92969H10.6641Z" fill="#41B883"/>
+<path d="M2.22656 2.92969L7.5 12.0264L12.7734 2.92969H10.6641L7.5 8.38769L4.30957 2.92969H2.22656Z" fill="#41B883"/>
+<path d="M4.30957 2.92969L7.5 8.41406L10.6641 2.92969H8.71289L7.5 5.03906L6.26074 2.92969H4.30957Z" fill="#35495E"/>
+</g>
+<defs>
+<clipPath id="clip0_1387_571">
+<rect width="15" height="15" fill="white"/>
+</clipPath>
+</defs>
+</svg>
