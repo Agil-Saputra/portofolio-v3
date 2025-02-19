@@ -24,7 +24,7 @@ To run this project locally, follow these steps:
    git clone https://github.com/Agil-Saputra/portofolio-v3.git
 2. **Navigate to the project directory**:
    ```bash
-   cd your-repo-name
+   cd portofolio-v3
 3. **Install dependencies**:
    ```bash
    npm install
