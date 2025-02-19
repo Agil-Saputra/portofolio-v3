@@ -9,10 +9,11 @@ import EducationCard from "./components/cards/educationCard";
 import ProjectCard from "./components/cards/projectCard";
 import { motion } from "framer-motion";
 
-import { skills as SkillsData} from "./db/skills";
+import { skills as SkillsData, frontEndSkills, tools } from "./db/skills";
 import { appProjects } from "./db/projects";
 import { workExperiences } from "./db/experiences";
 import { certifications } from "./db/certifications";
+import { education } from "./db/education";
 export default function Home() {
   const date = new Date();
 
@@ -27,20 +28,20 @@ export default function Home() {
   }
   return (
     <>
-      <div className="border-b border-gray-30 dark:border-gray-500">
+      <div className="border-b dark:border-gray-500">
         <div className="mx-auto grid h-2 max-w-8xl grid-cols-12 px-2 xs:h-8 xs:px-6 sm:px-10 xl:h-12 xl:px-10">
-          <div className="col-span-10 border-x border-gray-30 dark:border-gray-500 md:col-span-4"></div>
-          <div className="col-span-2 border-r border-gray-30 dark:border-gray-500 min-[896px]:col-span-4"></div>
-          <div className="col-span-6 hidden border-r border-gray-30 dark:border-gray-500 md:block min-[896px]:col-span-5 lg:col-span-4"></div>
+          <div className="col-span-10 border-x dark:border-gray-500 md:col-span-4"></div>
+          <div className="col-span-2 border-r dark:border-gray-500 min-[896px]:col-span-4"></div>
+          <div className="col-span-6 hidden border-r dark:border-gray-500 md:block min-[896px]:col-span-5 lg:col-span-4"></div>
         </div>
       </div>
 
       {/* Name & Contact */}
-      <div className="border-b border-gray-30 dark:border-gray-500">
+      <div className="border-b dark:border-gray-500">
         <div className="mx-auto grid max-w-8xl grid-cols-12 px-2 xs:px-6 sm:px-10 xl:px-10">
-          <div className="col-span-10 border-x border-gray-30 dark:border-gray-500 min-[896px]:col-span-6">
+          <div className="col-span-10 border-x dark:border-gray-500 min-[896px]:col-span-6">
             <motion.div
-              initial={{  opacity: 0 }}
+              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               viewport={{ once: true }}
@@ -76,9 +77,9 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-          <div className="col-span-2 border-r border-gray-30 dark:border-gray-500 min-[896px]:col-span-2"></div>
+          <div className="col-span-2 border-r dark:border-gray-500 min-[896px]:col-span-2"></div>
           {/* Contact Buttons */}
-          <div className="col-span-12 flex-col items-end justify-end border-x border-t border-gray-30 bg-gradient-to-br from-gray-30/30 via-white to-white p-4 md:p-8 text-right dark:border-gray-500 dark:from-gray-700 dark:via-gray-1000 dark:to-gray-1000  md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-4">
+          <div className="col-span-12 flex-col items-end justify-end border-x border-t bg-gradient-to-br from-gray-30/30 via-white to-white p-4 md:p-8 text-right dark:border-gray-500 dark:from-gray-700 md:flex md:border-l-0 md:border-t-0 min-[896px]:col-span-4">
             <div className="flex justify-between md:justify-end md:text-right">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -119,7 +120,7 @@ export default function Home() {
                 </ContactIconButton>
               </motion.div>
               <motion.div
-                initial={{  opacity: 0 }}
+                initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 viewport={{ once: true }}
@@ -141,7 +142,7 @@ export default function Home() {
       <div className="mx-auto grid max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10">
         <div className="px-6 pt-6 md:pt-8 md:px-8 border-r border-l border-b border-gray-500">
           <motion.h2
-            initial={{  opacity: 0 }}
+            initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             viewport={{ once: true }}
@@ -218,7 +219,7 @@ export default function Home() {
               <motion.a
                 key={item.description}
                 initial={{ opacity: 0 }}
-                whileInView={{  opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{
                   duration: 0.8,
                   ease: "easeInOut",
@@ -227,7 +228,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 target="_blank"
                 href=""
-                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 active:translate-y-0  transition-colors"
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 active:translate-y-0  transition-colors"
               >
                 <WorkCard
                   company={item.company}
@@ -281,7 +282,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 target="_blank"
                 href={certificate.href}
-                className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70  transition-colors"
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70  transition-colors"
               >
                 <LicenseCard
                   title={certificate.title}
@@ -347,6 +348,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+
         {/* Education */}
         <div className="w-full border-x col-span-1 border-r bg-gray-5/20 bg-center p-4 dark:border-gray-500 dark:bg-transparent md:p-8">
           <motion.div
@@ -377,47 +379,33 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">
-            <motion.a
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.7, ease: "easeInOut" }}
-              viewport={{ once: true }}
-              target="_blank"
-              href=""
-              className="col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70  transition-colors"
-            >
-              <EducationCard
-                major="Undergraduate Bachelor‘s Degree of Informatics"
-                institution="Amikom Yogyakarta University"
-                startMonth="August"
-                startYear="2023"
-                endMonth=""
-                endYear=""
-                isCurrent={true}
-                relatedCourse="Object Oriented Programming, Data Stuructures & Algorithm, Human Computer Interaction."
-              />
-            </motion.a>
-
-            <motion.a
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              viewport={{ once: true }}
-              target="_blank"
-              href=""
-              className="relative col-span-12 w-full overflow-hidden rounded-2xl border border-gray-30 bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
-            >
-              <EducationCard
-                major="Mathematic & Science"
-                institution="SMA Xaverius 01 Belitang"
-                startMonth="August"
-                startYear="2019"
-                endMonth="April"
-                endYear="2020"
-                isCurrent={true}
-                relatedCourse=""
-              />
-            </motion.a>
+            {education.map((education, index) => (
+              <motion.a
+                key={education.institution}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                target="_blank"
+                href=""
+                className="relative col-span-12 w-full overflow-hidden rounded-2xl border bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
+              >
+                <EducationCard
+                  major="Mathematic & Science"
+                  institution="SMA Xaverius 01 Belitang"
+                  startMonth="August"
+                  startYear="2019"
+                  endMonth="April"
+                  endYear="2020"
+                  isCurrent={true}
+                  relatedCourse=""
+                />
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>
@@ -470,39 +458,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Design Projects */}
-      {/* <div className="mx-auto grid grid-cols-12 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b">
-        <div className="col-span-12 border-gray-500 bg-gray-1000/20 p-6 md:p-8 transition-colors hover:bg-transparent border-x">
-          <div className="flex w-full flex-col items-start pr-6 xs:pr-8 sm:pr-0">
-            <div className="flex items-center space-x-3">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-[1.15rem] w-[1.15rem] text-green-500 dark:text-white"
-              >
-                <path
-                  d="M14.5 9C14.1022 9 13.7206 8.84196 13.4393 8.56066C13.158 8.27936 13 7.89782 13 7.5C13 7.10218 13.158 6.72064 13.4393 6.43934C13.7206 6.15804 14.1022 6 14.5 6C14.8978 6 15.2794 6.15804 15.5607 6.43934C15.842 6.72064 16 7.10218 16 7.5C16 7.89782 15.842 8.27936 15.5607 8.56066C15.2794 8.84196 14.8978 9 14.5 9ZM11.5 5C11.1022 5 10.7206 4.84196 10.4393 4.56066C10.158 4.27936 10 3.89782 10 3.5C10 3.10218 10.158 2.72064 10.4393 2.43934C10.7206 2.15804 11.1022 2 11.5 2C11.8978 2 12.2794 2.15804 12.5607 2.43934C12.842 2.72064 13 3.10218 13 3.5C13 3.89782 12.842 4.27936 12.5607 4.56066C12.2794 4.84196 11.8978 5 11.5 5ZM6.5 5C6.10218 5 5.72064 4.84196 5.43934 4.56066C5.15804 4.27936 5 3.89782 5 3.5C5 3.10218 5.15804 2.72064 5.43934 2.43934C5.72064 2.15804 6.10218 2 6.5 2C6.89782 2 7.27936 2.15804 7.56066 2.43934C7.84196 2.72064 8 3.10218 8 3.5C8 3.89782 7.84196 4.27936 7.56066 4.56066C7.27936 4.84196 6.89782 5 6.5 5ZM3.5 9C3.10218 9 2.72064 8.84196 2.43934 8.56066C2.15804 8.27936 2 7.89782 2 7.5C2 7.10218 2.15804 6.72064 2.43934 6.43934C2.72064 6.15804 3.10218 6 3.5 6C3.89782 6 4.27936 6.15804 4.56066 6.43934C4.84196 6.72064 5 7.10218 5 7.5C5 7.89782 4.84196 8.27936 4.56066 8.56066C4.27936 8.84196 3.89782 9 3.5 9ZM9 0C6.61305 0 4.32387 0.948211 2.63604 2.63604C0.948211 4.32387 0 6.61305 0 9C0 11.3869 0.948211 13.6761 2.63604 15.364C4.32387 17.0518 6.61305 18 9 18C9.39782 18 9.77936 17.842 10.0607 17.5607C10.342 17.2794 10.5 16.8978 10.5 16.5C10.5 16.11 10.35 15.76 10.11 15.5C9.88 15.23 9.73 14.88 9.73 14.5C9.73 14.1022 9.88804 13.7206 10.1693 13.4393C10.4506 13.158 10.8322 13 11.23 13H13C14.3261 13 15.5979 12.4732 16.5355 11.5355C17.4732 10.5979 18 9.32608 18 8C18 3.58 13.97 0 9 0Z"
-                  fill="currentColor"
-                />
-              </svg>
-
-              <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
-                Design Portfoliòs
-              </div>
-            </div>
-          </div>
-		  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {designProjects.map((project) => (
-              <ProjectCard key={project.description} title={project.name} description={project.description} href={project.link} image={project.image} skills={undefined}/>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className="mx-auto grid grid-cols-12 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b ">
+      {/* Tech Stacks */}
+      <div className="mx-auto grid grid-cols-12 max-w-8xl px-2 xs:px-6 sm:px-10 xl:px-10 border-gray-500 border-b ">
         <div className="col-span-12 border-x border-gray-500 bg-gray-1000/20 p-6 md:p-8 transition-colors hover:bg-transparent bg-dotted-light">
           <div className="flex w-full flex-col items-start pr-6 xs:pr-8 sm:pr-0">
             <div className="flex items-center space-x-3">
@@ -520,28 +477,90 @@ export default function Home() {
                 />
               </svg>
 
-              <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
+              <motion.div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
                 Tech Stacks
-              </div>
+              </motion.div>
             </div>
           </div>
 
-          <div className="flex w-full ml-2 mt-10 md:mt-16 md:ml-4 xl:ml-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            className="flex w-full ml-2 mt-10 md:mt-16 "
+          >
             <span className="italic text-sm md:text-xl text-white transition-colors group-hover:text-green-500">
               Front End Technologies
             </span>
+          </motion.div>
+          <div className="flex w-full mt-4 gap-6">
+            {frontEndSkills.map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                className="active:translate-y-[1px] flex flex-col justify-center items-center"
+              >
+                <Image
+                  className="h-24 md:h-24 w-auto"
+                  alt={skill.name}
+                  src={skill.icon}
+                />
+                <span className="text-xs text-center mt-2">{skill.name}</span>
+              </motion.div>
+            ))}
           </div>
-          <div className="flex w-full mt-4">
-            {frontEndSkills.map((skill) => (
-              <div key={skill.name} className="active:translate-y-[1px] flex flex-col justify-center items-center">
-                <Image className="h-32 md:h-32 w-auto" alt={skill.name} src={skill.icon}/>
-                <span className="text-xs text-center -mt-2">{skill.name}</span>
-              </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+            className="flex w-full ml-2 mt-10 md:mt-16 "
+          >
+            <span className="italic text-sm md:text-xl text-white transition-colors group-hover:text-green-500">
+              Tools
+            </span>
+          </motion.div>
+          <div className="flex w-full mt-4 gap-6">
+            {tools.map((tool, index) => (
+              <motion.div
+                key={tool.name}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                className="active:translate-y-[1px] flex flex-col justify-center items-center"
+              >
+                <Image
+                  className="h-24 md:h-24 w-auto"
+                  alt={tool.name}
+                  src={tool.icon}
+                />
+                <span className="text-xs text-center mt-2">{tool.name}</span>
+              </motion.div>
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
 
+      {/* Footer */}
       <footer className="text-center py-12">
         <p className="text-xl text-gray-500 ">Get in touch! Let&lsquo;s talk</p>
         <a
