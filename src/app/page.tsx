@@ -496,7 +496,7 @@ export default function Home() {
               Front End Technologies
             </span>
           </motion.div>
-          <div className="flex w-full mt-4 gap-6">
+          <div className="flex flex-wrap w-full mt-4 gap-6">
             {frontEndSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -511,7 +511,7 @@ export default function Home() {
                 className="active:translate-y-[1px] flex flex-col justify-center items-center"
               >
                 <Image
-                  className="h-24 md:h-24 w-auto"
+                  className="h-16 md:h-24 w-auto"
                   alt={skill.name}
                   src={skill.icon}
                 />
@@ -534,7 +534,7 @@ export default function Home() {
               Tools
             </span>
           </motion.div>
-          <div className="flex w-full mt-4 gap-6">
+          <div className="flex flex-wrap w-full mt-4 gap-6">
             {tools.map((tool, index) => (
               <motion.div
                 key={tool.name}
@@ -549,7 +549,7 @@ export default function Home() {
                 className="active:translate-y-[1px] flex flex-col justify-center items-center"
               >
                 <Image
-                  className="h-24 md:h-24 w-auto"
+                  className="h-16 md:h-24 w-auto"
                   alt={tool.name}
                   src={tool.icon}
                 />
