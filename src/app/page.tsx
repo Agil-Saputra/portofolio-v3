@@ -17,15 +17,15 @@ import { education } from "./db/education";
 export default function Home() {
   const date = new Date();
 
-  function greetings(hours: number) {
-    if (hours < 12 && hours >= 1) {
-      return "Good Morning";
-    } else if (hours >= 12 && hours <= 18) {
-      return "Good Afternoon";
-    } else if (hours > 18) {
-      return "Good Evening";
-    }
+ function greetings(hours: number) {
+  if (hours >= 1 && hours < 12) {
+    return "Good Morning";
+  } else if (hours >= 12 && hours <= 18) {
+    return "Good Afternoon";
+  } else {
+    return "Good Evening";
   }
+}
   return (
     <>
       <div className="border-b dark:border-gray-500">
