@@ -90,7 +90,7 @@ export default function Home() {
               >
                 <ContactIconButton
                   title="LinkedIn"
-                  href="https://linkedin.com/in/agilsaputra07"
+                  href="https://www.linkedin.com/in/agil-saputra07/"
                 >
                   <svg
                     viewBox="0 0 425 512"
@@ -395,14 +395,14 @@ export default function Home() {
                 className="relative col-span-12 w-full overflow-hidden rounded-2xl border bg-gradient-to-br via-white active:top-[1px] dark:border-gray-500 dark:from-gray-900 dark:to-gray-800 dark:hover:border-gray-200/70 hover:-translate-y-1 active:translate-y-0  transition-colors"
               >
                 <EducationCard
-                  major="Mathematic & Science"
-                  institution="SMA Xaverius 01 Belitang"
-                  startMonth="August"
-                  startYear="2019"
-                  endMonth="April"
-                  endYear="2020"
+                  major={education.major}
+                  institution={education.institution}
+                  startMonth={education.startMonth}
+                  startYear={education.startYear}
+                  endMonth={education.endMonth}
+                  endYear={education.endYear}
                   isCurrent={true}
-                  relatedCourse=""
+                  relatedCourse={education.relatedCourse}
                 />
               </motion.a>
             ))}

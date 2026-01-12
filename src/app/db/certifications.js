@@ -22,5 +22,13 @@ export const certifications = [
 	  "startMonth": "June",
 	  "startYear": "2023",
 	  "certificateID": "CC-ZN8ET1H1"
+	},
+	{
+	  "title": "EF Set English Certificate C1 Advanced 65/100",
+	  "source": "EF Set",
+	  "href": "https://cert.efset.org/57LbZh",
+	  "startMonth": "October",
+	  "startYear": "2025",
+	  "certificateID": "57LbZh"
 	}
   ]

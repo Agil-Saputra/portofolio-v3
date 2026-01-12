@@ -1,29 +1,26 @@
 import simbatras from "../../assets/simbatras.png";
 import elmart from "../../assets/elmart.png";
-import code from "../../assets/code.png";
+import recova from "../../assets/recova.png";
 import kudata from "../../assets/kudata.png";
-import bookmark from "../../assets/bookmark-landing-page.png";
-import rentalmobiligra from "../../assets/rental-iqra.png";
 import cethapil from "../../assets/cethapil.png"
 import movielist from "../../assets/movielist.png"
 
 export const appProjects = [
   {
     name: "Galderma Cetaphil POSM Web Dashboard Application",
-    description:"Cetaphil is a well-known skincare brand in Indonesia, my team helps build Web applications that helps manage sales data from all Cetaphil outlets across Indonesia. As a Front-End Developer in a team of three (including two Backend Developers), I was responsible for building the web dashboard UI, Charts, and Tables. I developed a clean, responsive interface that makes it easy for users, especially admin, to track sales data, analyze data, and manage business operations efficiently",
+    description:"Cetaphil is a well-known skincare brand in Indonesia, my team helps build Web applications that helps manage sales data from all Cetaphil outlets across Indonesia & Singapore. As the Front-End Developer in a team of three (including two Backend Developers), I was responsible for building the web dashboard UI & IOS App distribution on appstore. I developed a clean, responsive interface that makes it easy for users, especially admin, to track sales data, analyze data, and manage business operations efficiently.",
     link: "",
     source: "",
     image: cethapil,
     tech: ["Laravel", "Tailwind CSS", "Jquery"],
   },
   {
-    name: "Kudata",
-    description:
-      "platform designed to help students find respondents for their surveys. My role involves fixing bugs and improving existing features to enhance the website performance and user experience. This platform simplifies the process for students by connecting them with the right respondents, making data collection for their research projects more efficient and streamlined.",
-    link: "https://kudata.id",
+    name: "Recova",
+    description:"An integrated mobile ecosystem featuring a cross-platform app (Flutter) backed by Express.js and powered by an empathetic AI Coach (Flask and Gemini). My Role in this Project as the Founder and Engineering Lead, overseeing the full-stack development process from concept validation and technical specification to final deployment. My core focus is Frontend development, where I architect, implement, and maintain the entire user-facing application using the Flutter framework. Recova allows users to track their recovery progress and access instant crisis interventions, providing a private, supportive environment specifically designed to help individuals reduce pornography addiction and build healthier habits.",
+    link: "https://github.com/recova-app",
     source: "",
-    image: kudata,
-    tech: ["Vue.js", "Vuex", "Sass", "Tailwind CSS", "Shadcn"],
+    image: recova,
+    tech: ["Laravel", "Tailwind CSS", "Jquery"],
   },
   {
     name: "Simbatras",
@@ -33,6 +30,15 @@ export const appProjects = [
     source: "",
     image: simbatras,
     tech: ["React.js", "Laravel", "Material UI", "Tailwind CSS"],
+  },
+    {
+    name: "Kudata",
+    description:
+      "platform designed to help students find respondents for their surveys. My role involves fixing bugs and improving existing features to enhance the website performance and user experience. This platform simplifies the process for students by connecting them with the right respondents, making data collection for their research projects more efficient and streamlined.",
+    link: "https://kudata.id",
+    source: "",
+    image: kudata,
+    tech: ["Vue.js", "Vuex", "Sass", "Tailwind CSS", "Shadcn"],
   },
   {
     name: "Elmart",
@@ -44,39 +50,12 @@ export const appProjects = [
     tech: ["Next.js", "Contentful", "Material UI", "Tailwind CSS"],
   },
   {
-    name: "CODE 2024 Landing Page",
-    description:
-      "Fully responsive landing page for the CODE 2024 event held by AMCC, CODE is an annual competition event with the software development and competitive programming categories. ",
-    link: "https://code.amcc.or.id/",
-    source: "",
-    image: code,
-    tech: ["Laravel", "Alpine.js", "Tailwind CSS", "Javascript"],
-  },
-  {
-    name: "Bookmark | Landing Page",
-    description:
-      "Landing page that allows user to interact with incredible animations and interactive components while get the information from this website, this kind of landing page is perfect for business or organizations purpose.",
-    link: "https://simplebookmarkextension.netlify.app/",
-    source: "https://github.com/Agil-Saputra/Bookmark-Landing-Page",
-    image: bookmark,
-    tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-  },
-  {
     name: "Movielist Mobile App",
     description:"MovieList is a user-friendly mobile app that provides comprehensive movie reviews, including user ratings, critic reviews, and personal recommendations. Whether you're a casual viewer or a movie buff, MovieList helps you find the perfect movie to watch next.",
 	link: "https://simplebookmarkextension.netlify.app/",
     source: "https://github.com/Agil-Saputra/Bookmark-Landing-Page",
     image: movielist,
     tech: ["Flutter", "Firebase", "TMDB API"],
-  },
-  {
-    name: "Rentalmobiliqra.com",
-    description:
-      "Landing page website for renting cars using WordPress and Elementor. The site offers a user-friendly experience with clear information & attractive images making it simple for customers to find cars online.",
-    link: "https://rentalmobiliqra.com",
-    source: "",
-    image: rentalmobiligra,
-    tech: ["Wordpress", "CSS", "Elementor"],
   },
 ];
 
