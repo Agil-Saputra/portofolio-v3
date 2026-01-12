@@ -16,7 +16,7 @@ export const certifications = [
 	  "certificateID": ""
 	},
 	{
-	  "title": "1st Place Web Design Carnival Technology Laos 3.0",
+	  "title": "1st Place Web Design Competition Bitfest 2025",
 	  "source": "Universitas Catur Insan Cendekia Cirebon",
 	  "href": "https://www.linkedin.com/in/agil-saputra07/details/honors/",
 	  "startMonth": "Agustus",
