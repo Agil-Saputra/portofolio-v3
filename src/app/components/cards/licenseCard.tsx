@@ -12,7 +12,6 @@ const LicenseCard: FC<LicenseCardProps> = ({
   source,
   startMonth,
   startYear,
-  certificateID,
 }) => {
   return (
       <div className="flex h-full items-center justify-between space-x-4 transition-colors">
