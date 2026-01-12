@@ -265,7 +265,7 @@ export default function Home() {
               ></path>
             </svg>
             <div className="text-sm font-bold uppercase tracking-wide text-gray-1000 dark:text-green-400">
-              Certificates
+              Honors & Certifications
             </div>
           </motion.div>
           <div className="mt-4 grid grid-cols-6 gap-4 xs:mt-6 xs:gap-5">

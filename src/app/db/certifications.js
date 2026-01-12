@@ -1,34 +1,34 @@
 export const certifications = [
 	{
-	  "title": "Basic Web Programming",
-	  "source": "Dicoding",
-	  "href": "https://drive.google.com/file/d/1mlixt6FXCC7PFlEVdyra05rjFxJ-Gc8N/view?usp=sharing",
+	  "title": "1st Place App Development Competition MAGE 11",
+	  "source": "Institut Teknologi Sepuluh November",
+	  "href": "https://www.linkedin.com/in/agil-saputra07/details/honors/",
 	  "startMonth": "November",
-	  "startYear": "2023",
-	  "certificateID": "53XE42E9VZRN"
-	},
-	{
-	  "title": "Basic Front End Web Development",
-	  "source": "Dicoding",
-	  "href": "https://drive.google.com/file/d/1ZkMnODkWOzpXX6T_ik3SW_iALYTtxqMr/view?usp=sharing",
-	  "startMonth": "November",
-	  "startYear": "2023",
-	  "certificateID": "JLX1W8M9JP72"
-	},
-	{
-	  "title": "Javascript Intermediate",
-	  "source": "Sololearn",
-	  "href": "https://www.sololearn.com/certificates/CC-ZN8ET1H1",
-	  "startMonth": "June",
-	  "startYear": "2023",
-	  "certificateID": "CC-ZN8ET1H1"
-	},
-	{
-	  "title": "EF Set English Certificate C1 Advanced 65/100",
-	  "source": "EF Set",
-	  "href": "https://cert.efset.org/57LbZh",
-	  "startMonth": "October",
 	  "startYear": "2025",
-	  "certificateID": "57LbZh"
+	  "certificateID": ""
+	},
+	{
+	  "title": "1st Place Web Design Carnival Technology Laos 3.0",
+	  "source": "Universitas Jember",
+	  "href": "https://www.linkedin.com/in/agil-saputra07/details/honors/",
+	  "startMonth": "Agustus",
+	  "startYear": "2025",
+	  "certificateID": ""
+	},
+	{
+	  "title": "1st Place Web Design Carnival Technology Laos 3.0",
+	  "source": "Universitas Catur Insan Cendekia Cirebon",
+	  "href": "https://www.linkedin.com/in/agil-saputra07/details/honors/",
+	  "startMonth": "Agustus",
+	  "startYear": "2025",
+	  "certificateID": ""
+	},
+	{
+	  "title": "2nd Place Hackathon Amicta x Rumahweb",
+	  "source": "Universitas Amikom Yogyakarta X Rumahweb",
+	  "href": "https://www.linkedin.com/in/agil-saputra07/details/honors/",
+	  "startMonth": "Agustus",
+	  "startYear": "2025",
+	  "certificateID": ""
 	}
   ]

@@ -19,13 +19,11 @@ const LicenseCard: FC<LicenseCardProps> = ({
         <div className="flex-shrink-0 p-4 md:px-6 md:py-4 pr-2">
           <h3 className="text-md md:text-lg font-bold leading-none">{title}</h3>
           <div className="text-sm md:text-md leading-snug text-gray-50">
-            {source} ({startMonth} {startYear})
+            {source} 
           </div>
-          {certificateID && (
             <div className="mt-2 text-xs md:text-sm leading-snug text-gray-20">
-              ID Credential : {certificateID}
+              {startMonth} {startYear}
             </div>
-          )}
         </div>
       </div>
   );
